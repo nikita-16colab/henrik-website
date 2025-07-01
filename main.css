@@ -211,3 +211,42 @@ h1 {
     display: block;
 }
 
+.qodef-posts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.qodef-post-item-large-image {
+    grid-row: span 2;
+    grid-column: span 1;
+}
+.qodef-post-item img {
+    height: 200px;
+    max-height: 150px;
+    max-height: 250px;
+}
+.qodef-post-item-large-image img {
+    height: 420px;
+    min-height: 300px;
+    max-height: 500px;
+}
+.qodef-post-item p.qodef-post-meta,
+.qodef-post-title,
+.qodef-post-item-large-image 
+p.qodef-post-meta,
+.qodef-post-item-large-image 
+h3.qodef-post-title {
+margin-top: 10px;
+font-size: 14px;
+line-height: 1.4;
+flex-shrink: 0;
+}
+.qodef-post-item-large-image
+h3.qodef-post-title {
+    font-size: 20px;
+}
