@@ -143,8 +143,9 @@ a.active-menu-item::after {
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 50px;
     padding: 20px;
-    bottom: -15px;
+    
 
 }
 
@@ -174,13 +175,11 @@ button {
 
 .intro-text {
     font-family: 'Inter', sans-serif;
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
     max-width: 450px;
-    margin-left: 50px;
-    margin-top: 435px;
+   
 }
 
 h1 {
@@ -213,7 +212,7 @@ h1 {
 
 .qodef-posts-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr repeat(2, 1fr);
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -280,8 +279,7 @@ h3.qodef-post-title {
     gap: 10px;
 }
 
-.qodef-filters, .qodef-filter-item {
-    border: 1px solid #000;
+.qodef-filters, .qodef-filter-item { 
     border-radius: 55px;
     padding: 4px 12px;
     font-family: 'Inter',sans-serif;
@@ -312,7 +310,7 @@ h3.qodef-post-title {
 }
 .qodef-posts-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 1200px;
     padding: 20px;
@@ -321,13 +319,20 @@ h3.qodef-post-title {
 
 .qodef-post-item-large-image {
     grid-column: span 2;
+    grid-row: span 2;
 }
+
+
+
 .qodef-post-item img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    
 }
 .qodef-post-item-large-image img {
+    width: 100%;
     height: 691px;
     object-fit: cover;
 }
@@ -345,4 +350,6 @@ h3 .qodef-post-title {
 .qodef-post-item-large-image 
 h3.qodef-post-title {
     font-size: 20px;
+
 }
+
