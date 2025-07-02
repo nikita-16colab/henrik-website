@@ -250,3 +250,99 @@ flex-shrink: 0;
 h3.qodef-post-title {
     font-size: 20px;
 }
+.qodef-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.qodef-section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.qodef-section-header-left img {
+    height: 20px;
+    width: auto;
+}
+.qodef-section-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    color: #000;
+}
+.qodef-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qodef-filters, .qodef-filter-item {
+    border: 1px solid #000;
+    border-radius: 55px;
+    padding: 4px 12px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.qodef-filters .qodef-filter-item.active {
+    background-color: #000;
+    color: #fff;
+}
+.qodef-view-all {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+.qqodef-view-all:hover {
+    color: #555;
+}
+.qodef-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.qodef-post-item-large-image {
+    grid-column: span 2;
+}
+.qodef-post-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.qodef-post-item-large-image img {
+    height: 691px;
+    object-fit: cover;
+}
+
+.qodef-post-item p.qodef-post-meta,
+.qodef-post-title,
+.qodef-post-item-large-image,
+p.qodef-post-meta, .qodef-post-item-large-image
+h3 .qodef-post-title {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+.qodef-post-item-large-image 
+h3.qodef-post-title {
+    font-size: 20px;
+}
