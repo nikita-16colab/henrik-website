@@ -210,16 +210,6 @@ h1 {
     display: block;
 }
 
-.qodef-posts-grid {
-    display: grid;
-    grid-template-columns: 2fr repeat(2, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
 .qodef-post-item-large-image {
     grid-row: span 2;
     grid-column: span 1;
@@ -251,8 +241,8 @@ h3.qodef-post-title {
 }
 .qodef-section-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
@@ -262,6 +252,8 @@ h3.qodef-post-title {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 .qodef-section-header-left img {
     height: 20px;
@@ -305,12 +297,12 @@ h3.qodef-post-title {
     white-space: nowrap;
     transition: color 0.3s;
 }
-.qqodef-view-all:hover {
+.qodef-view-all:hover {
     color: #555;
 }
 .qodef-posts-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 1200px;
     padding: 20px;
@@ -322,18 +314,20 @@ h3.qodef-post-title {
     grid-row: span 2;
 }
 
-
+.qodef-post-item-cactus {
+    
+ }
 
 .qodef-post-item img {
     width: 100%;
-    height: 180px;
+    
     object-fit: cover;
-    margin-bottom: 10px;
+    display: block;
     
 }
 .qodef-post-item-large-image img {
     width: 100%;
-    height: 691px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -352,4 +346,73 @@ h3.qodef-post-title {
     font-size: 20px;
 
 }
+ .qodef-post-title {
+    position:relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 0;
+ }
+.qodef-post-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+.qodef-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 30px auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    flex wrap: nowrap;
+}
+.qodef-section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: auto;
+}
 
+.qodef-filter-label {
+    white-space: nowrap;
+}
+.qodef-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.qodef-filters .qodef-filter-item {
+    border: 1px solid #000; /* Добавьте границу, если ее нет */
+    border-radius: 55px;
+    padding: 4px 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.qodef-view-all {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 0;
+}
